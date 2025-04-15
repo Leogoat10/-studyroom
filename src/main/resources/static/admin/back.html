@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>后台登录页</title>
-    <script src="lib/constant.js"></script>
-    <script src="lib/jquery-3.4.1.js"></script>
-    <script src="lib/ajax.js"></script>
-    <link rel="stylesheet" href="lib/layui/css/layui.css">
+    <script src="../lib/constant.js"></script>
+    <script src="../lib/jquery-3.4.1.js"></script>
+    <script src="../lib/ajax.js"></script>
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
     <style>
         .main{
             margin:auto;
@@ -59,16 +59,7 @@
               contentType:"application/json",
               success: function(result) {
                   if(result.code==200){
-                      // addCookie("id",result.data.id,7200);
-                      // addCookie("username",result.data.username,7200)
-                      //获取token
-                      // var req = new XMLHttpRequest();
-                      // req.open('GET', document.location, false);
-                      // req.send(null);
-                      // let token = req.getResponseHeader("Authorization");
-                      // setCookie("token",token,7200);
-
-                      window.location.href="admin/home.html";
+                      window.location.href="home.html";
                   }
                   else if(result.code==400){
                       layer.msg("账号或密码错误");
